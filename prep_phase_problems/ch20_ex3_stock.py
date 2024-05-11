@@ -1,3 +1,7 @@
+# NEEDS REVISION: BAD ALGORITHM!
+# a better solution is just iterating over the array
+# my solution fails with [10, 7, 2, 24, 8, 5, 11]
+
 def max_profit(arr):
     left = 0
     right = len(arr) - 1
@@ -12,6 +16,7 @@ def max_profit(arr):
         right -= 1
         max = arr[right]
 
+    # increment/decrementing by 1 here is arbitrary and misses if the left encounters a greater max or the right encounters a lesser min
     while left < right:
         left += 1
         if arr[left] < min:
@@ -26,6 +31,7 @@ def max_profit(arr):
     else:
         return 0
 
+print(max_profit([10, 7, 2, 24, 8, 5, 11]))
 
 print(max_profit([10, 7, 5, 8, 11, 2, 6]))
 print(max_profit([10, 7, 2, 8, 11, 5, 24]))

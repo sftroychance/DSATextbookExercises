@@ -20,13 +20,20 @@ def remove_duplicates(arr):
     target_idx = 0
 
     for idx in range(1, len(arr)):
-        if arr[idx] == arr[target_idx]:
-            continue
+        # if arr[idx] == arr[target_idx]:
+        #     continue
 
-        target_idx += 1
-        arr[target_idx] = arr[idx]
+        # target_idx += 1
+        # arr[target_idx] = arr[idx]
 
-    print(arr)
+        # or more succinct, but it is slower on leetcode:
+        if arr[idx] != arr[target_idx]:
+            target_idx += 1
+            arr[target_idx] = arr[idx]
+
     return target_idx + 1
 
-print(remove_duplicates([0,0,1,1,1,2,2,3,3,4]) == 5)
+my_arr = [0,0,1,1,1,2,2,3,3,4]
+print(my_arr)
+print(remove_duplicates(my_arr) == 5)
+print(my_arr)

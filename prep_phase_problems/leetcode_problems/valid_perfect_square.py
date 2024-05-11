@@ -48,5 +48,5 @@ print(isPerfectSquare(25) == True)
 print(isPerfectSquare(100) == True)
 print(isPerfectSquare(3999) == False)
 print(isPerfectSquare(1764) == True)
-print(isPerfectSquare(2147483647) == True)
+print(isPerfectSquare(2147483647) == False)
 

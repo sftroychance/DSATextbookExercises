@@ -22,7 +22,8 @@ def count_k_difference(arr, diff):
     lookup = {}
     pairs = 0
 
-    for idx in range(len(arr) - 1, -1, -1):
+    # for idx in range(len(arr) - 1, -1, -1):
+    for idx in range(len(arr)):
         current_value = arr[idx]
         lookup[current_value] = lookup.get(current_value, 0) + 1
         count = lookup.get(current_value + diff, 0) + lookup.get(current_value - diff, 0)

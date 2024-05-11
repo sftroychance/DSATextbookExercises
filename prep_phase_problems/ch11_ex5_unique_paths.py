@@ -22,3 +22,5 @@ def unique_paths(rows, columns):
     return unique_paths(rows - 1, columns) + unique_paths(rows, columns - 1)
 
 print(unique_paths(3, 3))
+print(unique_paths(2, 3))
+print(unique_paths(5, 3))

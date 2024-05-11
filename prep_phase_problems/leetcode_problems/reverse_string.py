@@ -14,17 +14,30 @@
 # Time: O(N)
 # Space: O(N), creating list from letters
 
-def reverse_word(word):
-    letters = list(word)
-
+def reverse_string(arr):
     left = 0
-    right = len(letters) - 1
+    right = len(arr) - 1
 
     while left < right:
-        letters[left], letters[right] = letters[right], letters[left]
+        arr[left], arr[right] = arr[right], arr[left]
         left += 1
         right -= 1
 
-    return ''.join(letters)
+# def reverse_word(word):
+#     letters = list(word)
 
-print(reverse_word('howdy') == 'ydwoh')
+#     left = 0
+#     right = len(letters) - 1
+
+#     while left < right:
+#         letters[left], letters[right] = letters[right], letters[left]
+#         left += 1
+#         right -= 1
+
+#     return ''.join(letters)
+
+# print(reverse_word('howdy') == 'ydwoh')
+
+my_str = ['a', 'b', 'c', 'd', 'e']
+reverse_string(my_str)
+print(my_str)

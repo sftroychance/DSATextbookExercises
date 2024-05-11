@@ -1,4 +1,4 @@
-from node import Node
+from linked_list_classes.node import Node
 
 class LinkedList:
 
@@ -66,6 +66,16 @@ class LinkedList:
             current_index += 1
 
         current_node.next_node = current_node.next_node.next_node
+
+    def to_array(self):
+        current_node = self.first_node
+        arr = []
+
+        while current_node:
+            arr.append(current_node.data)
+            current_node = current_node.next_node
+
+        return arr
 
     def print_values(self):
         print('list values:')
